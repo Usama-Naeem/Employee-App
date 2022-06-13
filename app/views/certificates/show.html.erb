@@ -1,0 +1,23 @@
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Certificates</h1>
+  
+  <p>
+  <strong>Title:</strong>
+  <%= @certificate.title %>
+ </p>
+  <hr class="my-4">
+  <p>
+  <strong>Expiration date:</strong>
+  <%= @certificate.expiration_date %>
+  </p>
+  <p class="lead">
+    <br/>
+<br/>
+
+<%= link_to 'Edit', edit_certificate_path(@certificate), class:"btn btn-light"%> |
+<%= link_to 'Back', certificates_path, class:"btn btn-light" %>
+  </p>
+</div>

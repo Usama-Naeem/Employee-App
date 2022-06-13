@@ -1,0 +1,23 @@
+<%= form_with(model: education) do |form| %>
+
+<div class="field form-group">
+<%= form.text_field :degree_title , class:'form-control', placeholder: "Degree Title"%>
+</div>
+
+
+<div class="field form-group">
+<%= form.label :start_year, "Start Year:"%>
+<%= form.date_select :start_year, class:'form-control'%>
+</div>
+
+<div class="field form-group">
+<%= form.label :end_year, "End Year:" %>
+<%= form.date_select :end_year, class:'form-control'%>
+</div>
+
+
+<div class="action btn btn-secondary">
+<%= form.submit %>
+</div>
+
+<% end %>

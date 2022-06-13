@@ -1,0 +1,17 @@
+<%= form_with(model: certificate) do |form| %>
+
+<div class="field form-group">
+<%= form.text_field :title , class:'form-control', placeholder: "Title"%>
+</div>
+
+
+<div class="field form-group">
+<%= form.label :expiration_date, "Expiration Date:" %>
+<%= form.date_select :expiration_date, class:'form-control'%>
+</div>
+
+<div class="action btn btn-secondary">
+<%= form.submit %>
+</div>
+
+<% end %>

@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Certificate</h1>
+
+<table class="table">
+<thead class="thead-dark">
+<tr>
+<th> Title</th>
+<th> Expiration Date</th>
+<th>Owner</th>
+<th></th>
+<th></th>
+<th></th>
+
+</tr>
+</thead>
+
+<tbody>
+
+<% @certificates.each do |certificate| %> 
+
+<tr>
+<td><%= certificate.title%> </td>
+
+<td><%= certificate.expiration_date %> </td>
+
+<td><%= certificate.owner_id %></td>
+
+
+<td><%= link_to  "show", certificate, class:"btn btn-secondary"%> </td>
+<td><%= link_to "edit", edit_certificate_path(certificate) , class:"btn btn-secondary"%> </td>
+<td><%= link_to  "Destroy", certificate, method: :delete , class:"btn btn-secondary"%> </td>
+</tr>
+
+<% end %>
+
+</tbody>
+
+</table>
+
+
+<%= link_to 'New certificate', new_certificate_path, class:"btn btn-secondary" %>

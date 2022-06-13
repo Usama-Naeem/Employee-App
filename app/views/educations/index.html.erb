@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Educations</h1>
+
+<table class="table">
+<thead class="thead-dark">
+<tr>
+<th> Degree Title</th>
+<th> Start Date</th>
+<th> End Date</th>
+<th>Owner</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+
+<% @educations.each do |education| %> 
+
+<tr>
+<td><%= education.degree_title%> </td>
+
+<td><%= education.start_year %> </td>
+
+<td><%= education.end_year%> </td>
+<td><%= education.owner_id %></td>
+
+<td><%= link_to  "show", education , class:"btn btn-secondary"%> </td>
+<td><%= link_to "edit", edit_education_path(education) , class:"btn btn-secondary"%> </td>
+<td><%= link_to  "Destroy", education, method: :delete , class:"btn btn-secondary"%> </td>
+</tr>
+
+<% end %>
+
+</tbody>
+
+</table>
+
+
+<%= link_to 'New Education', new_education_path, class:"btn btn-secondary" %>

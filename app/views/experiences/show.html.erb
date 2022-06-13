@@ -1,0 +1,36 @@
+<div class="jumbotron">
+  <h1 class="display-4">Experience</h1>
+  
+  
+ <p>
+  <strong>Job Title:</strong>
+  <%= @experience.job_title %>
+ </p>
+
+  <hr class="my-4">
+  <p>
+  <strong>Employee Name:</strong>
+  <%= @experience.employee_name%>
+</p>
+
+  <hr class="my-4">
+  <p>
+  <strong>Start date:</strong>
+  <%= @experience.start_date %>
+  </p>
+
+ <hr class="my-4">
+  <p>
+  <strong>End date:</strong>
+  <%= @experience.end_date%>
+  </p>
+
+  <p class="lead">
+    <br/>
+<br/>
+
+<%= link_to 'Edit', edit_experience_path(@experience), class:"btn btn-light"%> |
+<%= link_to 'Back', experiences_path, class:"btn btn-light" %>
+
+  </p>
+</div>

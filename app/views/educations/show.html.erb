@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <h1 class="display-4">Education</h1>
+  
+  <p>
+  <strong>Degree title:</strong>
+  <%= @education.degree_title %>
+  </p>
+  <hr class="my-4">
+  <p>
+  <strong>Start date:</strong>
+  <%= @education.start_year %>
+  </p>
+
+  <hr class="my-4">
+  <p>
+  <strong>End date:</strong>
+  <%= @education.end_year%>
+  </p>
+
+  <p class="lead">
+    <br/>
+<br/>
+
+<%= link_to 'Edit', edit_education_path(@education), class:"btn btn-light"%> |
+<%= link_to 'Back', educations_path, class:"btn btn-light" %>
+
+  </p>
+</div>

@@ -1,0 +1,13 @@
+<%= form_with(model: skill) do |form| %>
+
+<div class="field">
+<%= form.text_field :title, placeholder: "Title"%>
+</div>
+
+<br/>
+
+<div class="action btn btn-secondary">
+<%= form.submit%>
+</div>
+
+<% end %>

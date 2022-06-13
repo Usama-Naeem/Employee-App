@@ -1,0 +1,24 @@
+<%= form_with(model: experience) do |form| %>
+<div class="field">
+<%= form.text_field :job_title, placeholder:"Job Title"%>
+</div>
+<br/>
+<div class="field">
+<%= form.text_field :employee_name, placeholder: "Employee Name" %>
+</div>
+<br/>
+<div class="field">
+<%= form.label :start_date, "Start Date: " %>
+<%= form.date_select :start_date%>
+</div>
+
+<div class="field">
+<%= form.label :end_date, "End Date: " %>
+<%= form.date_select :end_date, placeholder: "End Date" %>
+</div>
+
+<div class="action">
+<%= form.submit %>>
+</div>
+
+<%end%>
