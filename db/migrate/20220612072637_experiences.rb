@@ -6,6 +6,7 @@ class Experiences < ActiveRecord::Migration[6.1]
       t.date :start_date
       t.date :end_date
       t.integer :owner_id
+      t.date :total_experience
   end
 end
 end

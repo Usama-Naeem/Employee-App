@@ -3,6 +3,10 @@ class ExperiencesController < ApplicationController
       def index
       @experiences = Experience.all
       end
+
+      # def total(start_date, end_date)
+      #   @experiences= end_date.year - start_date.year
+      # end
   
       def show  
           
@@ -18,6 +22,9 @@ class ExperiencesController < ApplicationController
   def create
     @experience = Experience.new(experience_params)
     @experience.owner_id=current_employee.id
+
+
+
     respond_to do |format|
       if @experience.save
         format.html { redirect_to experience_url(@experience), notice: "Experience was successfully created." }
@@ -59,7 +66,7 @@ class ExperiencesController < ApplicationController
   end
 
   def experience_params 
-      params.require(:experience).permit(:job_title,:employee_name, :start_date, :end_date, :owner_id)
+      params.require(:experience).permit(:job_title,:employee_name, :start_date, :end_date, :owner_id, :total_experience)
 
   end
 end
