@@ -2,11 +2,13 @@
 
 <h1>Certificate</h1>
 
+<%# table header %>
+
 <table class="table">
 <thead class="thead-dark">
 <tr>
 <th> Title:</th>
-<th> Expiration Date:</th>
+<th> Expiration Year:</th>
 <th>Owner:</th>
 <th></th>
 <th></th>
@@ -25,6 +27,8 @@
 <td><%= certificate.expiration_date %> </td>
 
 <td><%= certificate.owner_id %></td>
+
+<%# CREATE READ UPDATE DELETE operations %>
 
 
 <td><%= link_to  "show", certificate, class:"btn btn-secondary"%> </td>
