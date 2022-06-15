@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2022_06_12_072637) do
     t.date "start_date"
     t.date "end_date"
     t.integer "owner_id"
+    t.date "total_experience"
   end
 
   create_table "skills", force: :cascade do |t|
